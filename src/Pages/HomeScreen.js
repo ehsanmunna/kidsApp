@@ -8,6 +8,9 @@ const styles = {
   }
 
 export default class HomeScreen extends Component {
+    static navigationOptions = {
+        title: 'Kids Lesson',
+      };
     render() {
      const {navigate} = this.props.navigation;
       return (

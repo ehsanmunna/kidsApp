@@ -4,6 +4,11 @@ import MatchingQuestion from '../Components/MatchingQuestion';
 import HeadLine from '../Components/HeadLine';
 
 export default class LavelFourScreen extends Component {
+
+  static navigationOptions = {
+    title: 'Lavel_4',
+  };
+
     render() {
       return (
         <View style={{flex: 1, padding: 10}}>

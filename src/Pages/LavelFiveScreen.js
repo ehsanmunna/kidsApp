@@ -4,9 +4,14 @@ import NumberMatchingQuestion from '../Components/NumberMatchingQuestion';
 import HeadLine from '../Components/HeadLine';
 
 export default class LavelFiveScreen extends Component {
+
+  static navigationOptions = {
+    title: 'Lavel_5',
+  };
+
     render() {
       return (
-        <View style={{flex: 1, padding: 10, flexDirection: 'column', alignItems: 'center'}}>
+        <View style={{flex: 1, padding: 10}}>
             <HeadLine Color="red" Label="সংখ্যার সাথে ছবি মিল করি"/>
             
             <NumberMatchingQuestion 
