@@ -10,11 +10,12 @@ const styles = {
 
 export default class ThumbButton extends Component {
     render() {
+        //const {navigate} = this.props.navigation;
         const extColor = {backgroundColor:  this.props.Color}
         const buttons = Object.assign({}, styles.buttonArea, extColor);
       return (
         <View>
-            <TouchableHighlight style={buttons}>
+            <TouchableHighlight style={buttons} onPress={this.props.onPress} >
                 <Text style={{lineHeight: sqSize, textAlign: "center"}}>{this.props.Label}</Text>
             </TouchableHighlight>
         </View>
