@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Text, View, TouchableHighlight} from 'react-native';
 import ThumbButton from '../Components/ThumbButton';
+import HeadLine from '../Components/HeadLine';
 
 const styles = {
     buttonRow: {flex: 1, flexDirection: "row", justifyContent: "space-between"}
@@ -11,9 +12,10 @@ export default class HomeScreen extends Component {
      const {navigate} = this.props.navigation;
       return (
         <View style={{flex: 1}}>
-            <View>
+            {/* <View>
                 <Text style={{fontSize: 20, margin: 10, textAlign: 'center'}}>Welcome to Interactive Lesson for Kids</Text>
-            </View>
+            </View> */}
+            <HeadLine Color="green" Label="Welcome to Interactive Lesson for Kids"/>
             <View style={{flex: 1, padding: 10}}>
             <View style={{flex: 1, flexDirection: "column", justifyContent: "space-between"}}>
                 <View style={styles.buttonRow}>

@@ -12,12 +12,12 @@ import LavelEightScreen from './src/Pages/LavelEightScreen';
 import LavelNineScreen from './src/Pages/LavelNineScreen';
 
 const AppNavigator = createStackNavigator({
-  Home: { screen: HomeScreen},
-  LavelOne: {screen: LavelOneScreen },
-  LavelTwo: {screen: LavelTwoScreen },
+  Home: { screen: HomeScreen },
+  LavelOne: { screen: LavelOneScreen },
+  LavelTwo: { screen: LavelTwoScreen },
   LavelThree: { screen: LavelThreeScreen },
-  LavelFour: {screen: LavelFourScreen },
-  LavelFive: {screen: LavelFiveScreen },
+  LavelFour: { screen: LavelFourScreen },
+  LavelFive: { screen: LavelFiveScreen },
   LavelSix: { screen: LavelSixScreen },
   LavelSeven: {screen: LavelSevenScreen },
   LavelEight: {screen: LavelEightScreen },
