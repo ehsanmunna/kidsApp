@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {View, Text, Image} from 'react-native';
 import SmallThumbButton from './SmallThumbButton';
 import ImojiNotify from './ImojiNotify';
+import ImageContainer from '../Components/ImageContainer';
 
 const styles = {
   TextBold: {
@@ -38,13 +39,11 @@ export default class LavelOneQuestion extends Component {
       const buttonValue = this.props.BtnValue || [1, 2, 3, 4]
       return (
         <View style={{flex:1}}>
-          {/* <View>
-            <Text>{this.state.correctAns} and {this.state.givenAns}</Text>
-          </View> */}
           <View style={styles.LayoutRow}>
             <View style={{flex: 1}}>
               <View style={styles.LayoutRow}>
-                <Image source={ this.props.ImagePath } style={{width: 100, height: 60}}/>
+                {/* <Image source={ this.props.ImagePath } style={{width: 100, height: 60}}/> */}
+                <ImageContainer ImagePath={ this.props.ImagePath } />
                 {/* <Text>কয়টি পতাকা?</Text> */}
                 <Text style={ Object.assign({}, styles.TextBold, {padding: 5}) }>{this.props.Label}</Text>
               </View>
