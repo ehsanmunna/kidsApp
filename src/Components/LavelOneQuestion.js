@@ -46,7 +46,7 @@ export default class LavelOneQuestion extends Component {
               <View style={styles.LayoutRow}>
                 <Image source={ this.props.ImagePath } style={{width: 100, height: 60}}/>
                 {/* <Text>কয়টি পতাকা?</Text> */}
-                <Text style={styles.TextBold}>{this.props.Label}</Text>
+                <Text style={ Object.assign({}, styles.TextBold, {padding: 5}) }>{this.props.Label}</Text>
               </View>
             </View>
             <View style={{flex: 1, height: 150, flexDirection: "row" }}>
