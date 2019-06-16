@@ -3,6 +3,7 @@ import {View, Image} from 'react-native';
 
 
 export default class IconNotify extends Component {
+  
     render() {
       return (
         <View>

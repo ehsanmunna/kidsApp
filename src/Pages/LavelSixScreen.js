@@ -3,6 +3,7 @@ import {Text, View, Image, TouchableHighlight} from 'react-native';
 import HeadLine from '../Components/HeadLine';
 import ImojiNotify from '../Components/ImojiNotify';
 import ImageContainer from '../Components/ImageContainer';
+import { Sound } from "../Services/Sound";
 
 const styles = {
   fontStyle: {fontSize: 24, fontWeight: '700'}
@@ -22,13 +23,20 @@ export default class LavelSixScreen extends Component {
     correctAns: 6,
     givenAns: 0
   }
-
   
+  componentWillMount(){
+    Sound.Init();
+  }
+  
+  PressImage = (value) => {
+    Sound.Play(this.state.correctAns == value);
+    this.setState({givenAns: value})
+  }
 
     render() {
       return (
         <View style={{flex: 1, padding: 10}}>
-            {/* <HeadLine Color="red" Label="যোগ করি"/>
+            <HeadLine Color="red" Label="যোগ করি"/>
             
             <View style={{flex: 1, flexDirection: "row", justifyContent: 'center'}}>
               <View style={{width: '40%'}}>
@@ -43,13 +51,13 @@ export default class LavelSixScreen extends Component {
                 <Text style={styles.fontStyle}>=></Text>
               </View>
               <View style={{width: '30%'}}>
-                <TouchableHighlight style={styles.imageTouch} onPress={ () => { this.setState({givenAns: 6})} }>
+                <TouchableHighlight style={styles.imageTouch} onPress={ () => { this.PressImage(6)} }>
                     <ImageContainer ImagePath={require( "../image/6+.jpg" )} />
                 </TouchableHighlight>
-                <TouchableHighlight style={styles.imageTouch} onPress={ () => { this.setState({givenAns: 4})} }>
+                <TouchableHighlight style={styles.imageTouch} onPress={ () => { this.PressImage(4)} }>
                     <ImageContainer ImagePath={require( "../image/4+.jpg" )} />
                 </TouchableHighlight>
-                <TouchableHighlight style={styles.imageTouch} onPress={ () => { this.setState({givenAns: 5})} }>
+                <TouchableHighlight style={styles.imageTouch} onPress={ () => { this.PressImage(5)} }>
                     <ImageContainer ImagePath={require( "../image/5+.jpg" )} />
                 </TouchableHighlight>
               </View>
@@ -57,7 +65,7 @@ export default class LavelSixScreen extends Component {
                 <ImojiNotify givenAns={this.state.givenAns} correctAns={this.state.correctAns} />
               </View>
 
-            </View> */}
+            </View>
 
             
         </View>

@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import { View, Button } from "react-native";
 import { createStackNavigator, createAppContainer } from "react-navigation";
 import HomeScreen from './src/Pages/HomeScreen';
 import LavelOneScreen from './src/Pages/LavelOneScreen';
@@ -12,8 +11,8 @@ import LavelSevenScreen from './src/Pages/LavelSevenScreen';
 import LavelEightScreen from './src/Pages/LavelEightScreen';
 import LavelNineScreen from './src/Pages/LavelNineScreen';
 
-var SoundPlayer = require('react-native-sound');
-var song = null;
+// var SoundPlayer = require('react-native-sound');
+// var song = null;
 
 const AppNavigator = createStackNavigator({
   Home: { screen: HomeScreen },
@@ -38,38 +37,18 @@ const AppContainer = createAppContainer(AppNavigator);
 
 export default class App extends Component {
 
-  componentWillMount(){
-    song = new SoundPlayer('my_success.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
-      if(error){
-        console.log('error when init sound: ', error)
-      }
-    })
-  }
-
-  onPressLearnMore = () => {
-    console.log(song)
-    if(song != null){
-      song.play((success)=>{
-        if (!success) {
-          console.log('error when play')
-        } else {
-          console.log('play')
-        }
-      })
-    }
-  }
 
   render() {
     return (
-      <View style={{flex: 1}}>
-        <Button
-          onPress={this.onPressLearnMore}
-          title="Learn More"
-          color="#841584"
-          accessibilityLabel="Learn more about this purple button"
-        />
-        <AppContainer/>
-      </View>
+      // <View style={{flex: 1}}>
+      //   <Button
+      //     onPress={this.onPressLearnMore}
+      //     title="Learn More"
+      //     color="#841584"
+      //     accessibilityLabel="Learn more about this purple button"
+      //   />
+      // </View>
+      <AppContainer/>
       
     );
   }

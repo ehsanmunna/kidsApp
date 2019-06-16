@@ -15,7 +15,7 @@ export default class LavelThreeScreen extends Component {
     render() {
       return (
         <View style={{flex: 1, padding: 10}}>
-          {/* <HeadLine Color="red" Label="তুলনা কর"/>
+          <HeadLine Color="red" Label="তুলনা কর"/>
           
           <CompareQuestion
             Label="কেনটি বেশি?"
@@ -36,7 +36,7 @@ export default class LavelThreeScreen extends Component {
             correctAns="2"
             ImagePath1={ require('../image/Khato.jpg') }
             ImagePath2={ require('../image/Lomba.jpg') }
-          />             */}
+          />
         </View>
       );
     }

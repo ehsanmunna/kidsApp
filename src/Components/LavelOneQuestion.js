@@ -3,7 +3,7 @@ import {View, Text, Image} from 'react-native';
 import SmallThumbButton from './SmallThumbButton';
 import ImojiNotify from './ImojiNotify';
 import ImageContainer from '../Components/ImageContainer';
-
+import { Sound } from "../Services/Sound";
 const styles = {
   TextBold: {
     fontWeight: '700'
@@ -25,12 +25,16 @@ export default class LavelOneQuestion extends Component {
     givenAns: 0
   }
 
-  componentDidMount(){
-    console.log('img path', this.props.ImagePath)
+
+  componentWillMount(){
+    Sound.Init();
   }
+  
 
   SetAnsware = (_item) => {
-    
+
+    Sound.Play(this.state.correctAns == _item);
+
     this.setState( {givenAns: _item} )
     // console.log(_item)
     
