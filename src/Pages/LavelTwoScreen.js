@@ -12,7 +12,7 @@ const styles = {
 export default class LavelTwoScreen extends Component {
 
   static navigationOptions = {
-    title: 'Lavel_2',
+    title: 'Level_2',
   };
 
 

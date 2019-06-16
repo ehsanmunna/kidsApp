@@ -16,7 +16,7 @@ const styles = {
 export default class LavelOneScreen extends Component {
     
   static navigationOptions = {
-    title: 'Lavel_1',
+    title: 'Level_1',
   };
 
     render() {

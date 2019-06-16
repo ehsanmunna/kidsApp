@@ -10,14 +10,14 @@ import MathComponent from '../Components/MathComponent';
 export default class LavelEightScreen extends Component {
 
   static navigationOptions = {
-    title: 'Lavel_8',
+    title: 'Level_8',
   };
 
 
     render() {
       return (
         <View style={{flex: 1, padding: 10}}>
-            <HeadLine Color="red" Label="যোগ করি"/>
+            {/* <HeadLine Color="red" Label="যোগ করি"/>
             
             <MathComponent 
               Button1={{Label: "১", Color: "orange"}} 
@@ -37,7 +37,7 @@ export default class LavelEightScreen extends Component {
             <MathComponent 
               Button1={{Label: "৩", Color: "yellow"}} 
               Button2={{Label: "৪", Color: "#AC9DDE"}} 
-              correctAns="7"/>
+              correctAns="7"/> */}
         </View>
       );
     }

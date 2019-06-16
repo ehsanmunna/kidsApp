@@ -6,7 +6,7 @@ import HeadLine from '../Components/HeadLine';
 export default class LavelFourScreen extends Component {
 
   static navigationOptions = {
-    title: 'Lavel_4',
+    title: 'Level_4',
   };
 
     render() {

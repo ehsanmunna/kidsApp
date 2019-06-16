@@ -15,7 +15,7 @@ const styles = {
 export default class LavelSixScreen extends Component {
 
   static navigationOptions = {
-    title: 'Lavel_6',
+    title: 'Level_6',
   };
 
   state = {
@@ -28,7 +28,7 @@ export default class LavelSixScreen extends Component {
     render() {
       return (
         <View style={{flex: 1, padding: 10}}>
-            <HeadLine Color="red" Label="যোগ করি"/>
+            {/* <HeadLine Color="red" Label="যোগ করি"/>
             
             <View style={{flex: 1, flexDirection: "row", justifyContent: 'center'}}>
               <View style={{width: '40%'}}>
@@ -57,7 +57,7 @@ export default class LavelSixScreen extends Component {
                 <ImojiNotify givenAns={this.state.givenAns} correctAns={this.state.correctAns} />
               </View>
 
-            </View>
+            </View> */}
 
             
         </View>

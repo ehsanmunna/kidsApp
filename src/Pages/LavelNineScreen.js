@@ -6,7 +6,7 @@ import MathComponent from '../Components/MathComponent';
 export default class LavelNineScreen extends Component {
 
   static navigationOptions = {
-    title: 'Lavel_9',
+    title: 'Level_9',
   };
 
     render() {
