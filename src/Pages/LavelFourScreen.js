@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Text, View} from 'react-native';
 import MatchingQuestion from '../Components/MatchingQuestion';
 import HeadLine from '../Components/HeadLine';
+import { Color } from '../css/_veriables';
 
 export default class LavelFourScreen extends Component {
 
@@ -12,7 +13,7 @@ export default class LavelFourScreen extends Component {
     render() {
       return (
         <View style={{flex: 1, padding: 10}}>
-            <HeadLine Color="red" Label="সমান সংখ্যক ছবি মিল করি"/>
+            <HeadLine Color={Color.red} Label="সমান সংখ্যক ছবি মিল করি"/>
             
             <MatchingQuestion 
               correctAns="2"

@@ -5,6 +5,7 @@ import SmallThumbButton from '../Components/SmallThumbButton';
 import ImojiNotify from '../Components/ImojiNotify';
 import LavelOneQuestion from '../Components/LavelOneQuestion';
 import HeadLine from '../Components/HeadLine';
+import { Color } from '../css/_veriables';
 
 const styles = {
   TextBold: {
@@ -22,7 +23,7 @@ export default class LavelOneScreen extends Component {
     render() {
       return (
         <View style={{flex: 1, padding: 10}}>
-            <HeadLine Color="red" Label="তুলনা কর"/>
+            <HeadLine Color={Color.red} Label="তুলনা কর"/>
             <LavelOneQuestion 
               correctAns="1" 
               ImagePath={require( "../image/Flag.jpg" )}

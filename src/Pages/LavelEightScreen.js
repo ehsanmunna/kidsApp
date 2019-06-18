@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
-import {Text, View} from 'react-native';
+import {View} from 'react-native';
 import HeadLine from '../Components/HeadLine';
-import SmallThumbButton from '../Components/SmallThumbButton';
-import { TextInput } from 'react-native-gesture-handler';
 import MathComponent from '../Components/MathComponent';
+import { Color } from '../css/_veriables';
 
 
 
@@ -17,7 +16,7 @@ export default class LavelEightScreen extends Component {
     render() {
       return (
         <View style={{flex: 1, padding: 10}}>
-            <HeadLine Color="red" Label="যোগ করি"/>
+            <HeadLine Color={Color.red} Label="যোগ করি"/>
             
             <MathComponent 
               Button1={{Label: "১", Color: "orange"}} 

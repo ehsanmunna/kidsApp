@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Text, View, ScrollView} from 'react-native';
 import NumberMatchingQuestion from '../Components/NumberMatchingQuestion';
 import HeadLine from '../Components/HeadLine';
+import { Color } from '../css/_veriables';
 
 export default class LavelFiveScreen extends Component {
 
@@ -12,7 +13,7 @@ export default class LavelFiveScreen extends Component {
     render() {
       return (
         <View style={{flex: 1, flexDirection: 'column', padding: 10}}>
-            <HeadLine Color="red" Label="সংখ্যার সাথে ছবি মিল করি"/>
+            <HeadLine Color={Color.red} Label="সংখ্যার সাথে ছবি মিল করি"/>
             
             <ScrollView>
               <NumberMatchingQuestion 

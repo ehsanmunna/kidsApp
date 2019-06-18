@@ -3,6 +3,7 @@ import {Text, View, Image, TouchableHighlight} from 'react-native';
 import HeadLine from '../Components/HeadLine';
 import ImojiNotify from '../Components/ImojiNotify';
 import CompareQuestion from '../Components/CompareQuestion';
+import { Color } from '../css/_veriables';
 
 
 
@@ -15,7 +16,7 @@ export default class LavelThreeScreen extends Component {
     render() {
       return (
         <View style={{flex: 1, padding: 10}}>
-          <HeadLine Color="red" Label="তুলনা কর"/>
+          <HeadLine Color={Color.red} Label="তুলনা কর"/>
           
           <CompareQuestion
             Label="কেনটি বেশি?"

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Text, View, TouchableHighlight} from 'react-native';
+import {Text, View, TouchableOpacity} from 'react-native';
 
 const sqSize = 100;
 const styles = {
@@ -15,9 +15,9 @@ export default class ThumbButton extends Component {
         const buttons = Object.assign({}, styles.buttonArea, extColor);
       return (
         <View>
-            <TouchableHighlight style={buttons} onPress={this.props.onPress} >
+            <TouchableOpacity style={buttons} onPress={this.props.onPress} >
                 <Text style={{lineHeight: sqSize, textAlign: "center"}}>{this.props.Label}</Text>
-            </TouchableHighlight>
+            </TouchableOpacity>
         </View>
       );
     }

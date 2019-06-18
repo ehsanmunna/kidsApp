@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
-import {Text, View, TouchableHighlight, Image} from 'react-native';
+import {Text, View, TouchableOpacity} from 'react-native';
 import ImojiNotify from './ImojiNotify';
 import ImageContainer from '../Components/ImageContainer';
 import { Sound } from "../Services/Sound";
+import { LayoutCSS } from '../css/Layout';
 
 const styles = {
     TextBold: {
@@ -33,7 +34,7 @@ export default class MatchingQuestion extends Component {
 
     render() {
       return (
-        <View style={{flex: 1, flexDirection: 'row', alignItems: 'center'}}>
+        <View style={ Object.assign({}, LayoutCSS.LayoutRow, {alignItems: 'center'} )}>
           {/* <View>
             <Text>{this.state.correctAns} and {this.state.givenAns}</Text>
           </View> */}
@@ -47,20 +48,20 @@ export default class MatchingQuestion extends Component {
             </View>
             
             <View style={{flex: 1}}>
-                <TouchableHighlight style={styles.ImgTouch} onPress={ () => { this.PressImage(this.props.Image1.Value)} }>
+                <TouchableOpacity style={styles.ImgTouch} onPress={ () => { this.PressImage(this.props.Image1.Value)} }>
                     {/* <Image source={ this.props.Image1.Path } style={{width: 130, height: 35}}/> */}
                     <ImageContainer ImagePath={ this.props.Image1.Path } />
-                </TouchableHighlight>
+                </TouchableOpacity>
                 
-                <TouchableHighlight style={styles.ImgTouch} onPress={ () => { this.PressImage(this.props.Image2.Value)} }>
+                <TouchableOpacity style={styles.ImgTouch} onPress={ () => { this.PressImage(this.props.Image2.Value)} }>
                     {/* <Image source={ this.props.Image2.Path } style={{width: 130, height: 70}}/> */}
                     <ImageContainer ImagePath={ this.props.Image2.Path } />
-                </TouchableHighlight>
+                </TouchableOpacity>
                 
-                <TouchableHighlight style={styles.ImgTouch} onPress={ () => { this.PressImage(this.props.Image3.Value)} }>
+                <TouchableOpacity style={styles.ImgTouch} onPress={ () => { this.PressImage(this.props.Image3.Value)} }>
                     {/* <Image source={ this.props.Image3.Path } style={{width: 130, height: 70}}/> */}
                     <ImageContainer ImagePath={ this.props.Image3.Path } />
-                </TouchableHighlight>
+                </TouchableOpacity>
                 
             </View>
             <ImojiNotify givenAns={this.state.givenAns} correctAns={this.state.correctAns}/>

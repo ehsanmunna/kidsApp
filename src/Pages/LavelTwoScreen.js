@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Text, View} from 'react-native';
 import LavelOneQuestion from '../Components/LavelOneQuestion';
 import HeadLine from '../Components/HeadLine';
+import { Color } from '../css/_veriables';
 
 const styles = {
   TextBold: {
@@ -22,7 +23,7 @@ export default class LavelTwoScreen extends Component {
             {/* <View>
               <Text style={styles.TextBold}>গননা কর</Text>
             </View> */}
-            <HeadLine Color="red" Label="গননা কর"/>
+            <HeadLine Color={Color.red} Label="গননা কর"/>
             <LavelOneQuestion 
               correctAns="4" 
               ImagePath={require( "../image/Four4.jpg" )}

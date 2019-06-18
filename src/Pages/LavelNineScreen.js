@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Text, View} from 'react-native';
 import HeadLine from '../Components/HeadLine';
 import MathComponent from '../Components/MathComponent';
+import { Color } from '../css/_veriables';
 
 export default class LavelNineScreen extends Component {
 
@@ -12,7 +13,7 @@ export default class LavelNineScreen extends Component {
     render() {
       return (
         <View style={{flex: 1, padding: 10}}>
-            <HeadLine Color="red" Label="বিয়োগ করি"/>
+            <HeadLine Color={Color.red} Label="বিয়োগ করি"/>
             
             <MathComponent subtract 
               Button1={{Label: "৪", Color: "orange"}} 

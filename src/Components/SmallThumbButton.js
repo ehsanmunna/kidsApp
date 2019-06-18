@@ -1,23 +1,25 @@
 import React, {Component} from 'react';
-import {Text, View, TouchableHighlight} from 'react-native';
+import {Text, View, TouchableOpacity} from 'react-native';
+import { Button } from '../css/_veriables';
+import { ButtonStyle } from '../css/Button';
 
-const sqSize = 50;
-const styles = {
-    buttonArea: {
-        height: sqSize, width: sqSize
-    }
-}
+// const sqSize = 50;
+// const styles = {
+//     buttonArea: {
+//         height: sqSize, width: sqSize
+//     }
+// }
 
 export default class SmallThumbButton extends Component {
     render() {
         //const {navigate} = this.props.navigation;
-        const extColor = {backgroundColor:  this.props.Color}
-        const buttons = Object.assign({}, styles.buttonArea, extColor);
+        const extColor = {backgroundColor:  this.props.Color, margin: 5}
+        const buttons = Object.assign({}, ButtonStyle.ButtonSize, extColor);
       return (
         <View>
-            <TouchableHighlight style={buttons} onPress={this.props.onPress} >
-                <Text style={{lineHeight: sqSize, textAlign: "center"}}>{this.props.Label}</Text>
-            </TouchableHighlight>
+            <TouchableOpacity style={buttons} onPress={this.props.onPress} >
+                <Text style={{lineHeight: Button.SquarSize, textAlign: "center"}}>{this.props.Label}</Text>
+            </TouchableOpacity>
         </View>
       );
     }
