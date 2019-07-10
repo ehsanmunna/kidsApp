@@ -6,6 +6,7 @@ import ImageContainer from '../Components/ImageContainer';
 import { Sound } from "../Services/Sound";
 import { Color } from '../css/_veriables';
 import { TextCSS } from '../css/Text';
+import { PageTitle } from '../Services/titletext';
 
 const styles = {
   //fontStyle: {fontSize: 24, fontWeight: '700'}
@@ -18,7 +19,7 @@ const styles = {
 export default class LavelSixScreen extends Component {
 
   static navigationOptions = {
-    title: 'Level_6',
+    title: PageTitle.level2Lesson3
   };
 
   state = {

@@ -4,13 +4,14 @@ import HeadLine from '../Components/HeadLine';
 import ImojiNotify from '../Components/ImojiNotify';
 import CompareQuestion from '../Components/CompareQuestion';
 import { Color } from '../css/_veriables';
+import { PageTitle } from '../Services/titletext';
 
 
 
 export default class LavelThreeScreen extends Component {
 
   static navigationOptions = {
-    title: 'Level_3',
+    title: PageTitle.level1Lesson3
   };
 
     render() {

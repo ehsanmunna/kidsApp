@@ -3,11 +3,12 @@ import {Text, View} from 'react-native';
 import HeadLine from '../Components/HeadLine';
 import MathComponent from '../Components/MathComponent';
 import { Color } from '../css/_veriables';
+import { PageTitle } from '../Services/titletext';
 
 export default class LavelNineScreen extends Component {
 
   static navigationOptions = {
-    title: 'Level_9',
+    title: PageTitle.level3Lesson3
   };
 
     render() {

@@ -3,13 +3,14 @@ import {View} from 'react-native';
 import HeadLine from '../Components/HeadLine';
 import MathComponent from '../Components/MathComponent';
 import { Color } from '../css/_veriables';
+import { PageTitle } from '../Services/titletext';
 
 
 
 export default class LavelEightScreen extends Component {
 
   static navigationOptions = {
-    title: 'Level_8',
+    title: PageTitle.level3Lesson2
   };
 
 

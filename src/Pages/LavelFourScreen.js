@@ -3,11 +3,12 @@ import {Text, View} from 'react-native';
 import MatchingQuestion from '../Components/MatchingQuestion';
 import HeadLine from '../Components/HeadLine';
 import { Color } from '../css/_veriables';
+import { PageTitle } from '../Services/titletext';
 
 export default class LavelFourScreen extends Component {
 
   static navigationOptions = {
-    title: 'Level_4',
+    title: PageTitle.level2Lesson1
   };
 
     render() {
