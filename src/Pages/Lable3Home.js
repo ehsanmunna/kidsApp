@@ -8,7 +8,7 @@ const styles = {
     buttonRow: {flex: 1, flexDirection: "row", justifyContent: "space-between"}
   }
 //SoundPlayer.MAIN_BUNDLE
-export default class HomeScreen extends Component {
+export default class Label3HomeScreen extends Component {
   
   static navigationOptions = {
         title: 'Kids Lesson',
@@ -26,17 +26,14 @@ export default class HomeScreen extends Component {
             <HeadLine Color={Color.green} Label="Welcome to Interactive Lesson for Kids"/>
             
             <View style={{flex: 1, padding: 10}}>
-              <View style={{flex: 1, flexDirection: "column", justifyContent: "space-between"}}>
-                <View style={styles.buttonRow}>
-                  <ThumbButton Label="Label 1" Color={Color.red} onPress={() => navigate('Label1Home') }/>
-                </View>
-                <View style={styles.buttonRow}>
-                  <ThumbButton Label="Label 2" Color={Color.green} onPress={() => navigate('Label2Home') }/>
-                </View>
-                <View style={styles.buttonRow}>
-                  <ThumbButton Label="Label 3" Color={Color.blue} onPress={() => navigate('Label3Home') }/>
-                </View>
-              </View>
+            <View style={{flex: 1, flexDirection: "column", justifyContent: "space-between"}}>
+              
+              <ThumbButton Label="Lesson 7" Color={Color.purple} onPress={() => navigate('LavelSeven')}/>
+              <ThumbButton Label="Lesson 8" Color={Color.greenLime} onPress={() => navigate('LavelEight')}/>
+              <ThumbButton Label="Lesson 9" Color={Color.red} onPress={() => navigate('LavelNine')}/>
+                
+            </View>
+            
             </View>
         </View>
       );

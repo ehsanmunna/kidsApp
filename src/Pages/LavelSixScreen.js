@@ -40,7 +40,7 @@ export default class LavelSixScreen extends Component {
         <View style={{flex: 1, padding: 10}}>
             <HeadLine Color={Color.red} Label="যোগ করি"/>
             
-            <View style={{flex: 1, flexDirection: "row", justifyContent: 'center'}}>
+            {/* <View style={{flex: 1, flexDirection: "row", justifyContent: 'center'}}>
               <View style={{width: '40%'}}>
                 <View style={{flex: 1, flexDirection: "column", alignItems: 'center'}}>
                   <ImageContainer ImagePath={require( "../image/2+.jpg" )} />
@@ -67,7 +67,7 @@ export default class LavelSixScreen extends Component {
                 <ImojiNotify givenAns={this.state.givenAns} correctAns={this.state.correctAns} />
               </View>
 
-            </View>
+            </View> */}
 
             
         </View>

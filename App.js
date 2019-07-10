@@ -10,12 +10,18 @@ import LavelSixScreen from './src/Pages/LavelSixScreen';
 import LavelSevenScreen from './src/Pages/LavelSevenScreen';
 import LavelEightScreen from './src/Pages/LavelEightScreen';
 import LavelNineScreen from './src/Pages/LavelNineScreen';
+import Label1HomeScreen from './src/Pages/Lable1Home';
+import Label3HomeScreen from './src/Pages/Lable3Home';
+import Label2HomeScreen from './src/Pages/Lable2Home';
 
 // var SoundPlayer = require('react-native-sound');
 // var song = null;
 
 const AppNavigator = createStackNavigator({
   Home: { screen: HomeScreen },
+  Label1Home: { screen: Label1HomeScreen },
+  Label2Home: { screen: Label2HomeScreen },
+  Label3Home: { screen: Label3HomeScreen },
 
   LavelOne: { screen: LavelOneScreen },
   LavelTwo: { screen: LavelTwoScreen },
