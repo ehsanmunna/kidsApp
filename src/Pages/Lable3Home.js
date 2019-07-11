@@ -29,9 +29,9 @@ export default class Label3HomeScreen extends Component {
             <View style={{flex: 1, padding: 10}}>
             <View style={{flex: 1, flexDirection: "column", justifyContent: "space-between"}}>
               
-              <ThumbButton Label="Lesson 7" Color={Color.purple} onPress={() => navigate('LavelSeven')}/>
-              <ThumbButton Label="Lesson 8" Color={Color.greenLime} fontColor="#000" onPress={() => navigate('LavelEight')}/>
-              <ThumbButton Label="Lesson 9" Color={Color.red} onPress={() => navigate('LavelNine')}/>
+              <ThumbButton Label="Lesson 1" Color={Color.purple} onPress={() => navigate('LavelSeven')}/>
+              <ThumbButton Label="Lesson 2" Color={Color.greenLime} fontColor="#000" onPress={() => navigate('LavelEight')}/>
+              <ThumbButton Label="Lesson 3" Color={Color.red} onPress={() => navigate('LavelNine')}/>
                 
             </View>
             

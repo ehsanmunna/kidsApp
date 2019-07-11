@@ -41,7 +41,7 @@ export default class LavelSevenScreen extends Component {
         <View style={{flex: 1, padding: 10}}>
             <HeadLine Color={Color.red} Label="বিয়োগ করি"/>
             
-            {/* <View style={{flex: 1, flexDirection: "row", justifyContent: 'center'}}>
+            <View style={{flex: 1, flexDirection: "row", justifyContent: 'center'}}>
               <View style={{width: '30%'}}>
                 <View style={{flex: 1, flexDirection: "column", alignItems: 'center'}}>
                   <ImageContainerPortrait ImagePath={require( "../image/4-.jpg" )} />
@@ -68,7 +68,7 @@ export default class LavelSevenScreen extends Component {
                 <ImojiNotify givenAns={this.state.givenAns} correctAns={this.state.correctAns} />
               </View>
 
-            </View> */}
+            </View>
             
         </View>
       );
