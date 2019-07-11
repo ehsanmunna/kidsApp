@@ -6,6 +6,7 @@ import ImojiNotify from '../Components/ImojiNotify';
 import { Sound } from "../Services/Sound";
 import { Color } from '../css/_veriables';
 import { TextCSS } from '../css/Text';
+import { PageTitle } from '../Services/titletext';
 
 const styles = {
   fontStyle: {fontSize: 24, fontWeight: '700'}
@@ -18,7 +19,7 @@ const styles = {
 export default class LavelSevenScreen extends Component {
 
   static navigationOptions = {
-    title: 'Level_7',
+    title: PageTitle.level3Lesson1
   };
 
   state = {

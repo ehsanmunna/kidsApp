@@ -6,6 +6,7 @@ import ImojiNotify from '../Components/ImojiNotify';
 import LavelOneQuestion from '../Components/LavelOneQuestion';
 import HeadLine from '../Components/HeadLine';
 import { Color } from '../css/_veriables';
+import { PageTitle } from '../Services/titletext';
 
 const styles = {
   TextBold: {
@@ -17,7 +18,7 @@ const styles = {
 export default class LavelOneScreen extends Component {
     
   static navigationOptions = {
-    title: 'Level_1',
+    title: PageTitle.level1Lesson1
   };
 
     render() {

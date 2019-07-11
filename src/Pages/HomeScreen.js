@@ -3,6 +3,7 @@ import {View} from 'react-native';
 import ThumbButton from '../Components/ThumbButton';
 import HeadLine from '../Components/HeadLine'
 import { Color } from "../css/_veriables";
+import { PageTitle } from '../Services/titletext';
 
 const styles = {
     buttonRow: {flex: 1, flexDirection: "row", justifyContent: "space-between"}
@@ -11,7 +12,7 @@ const styles = {
 export default class HomeScreen extends Component {
   
   static navigationOptions = {
-        title: 'Kids Lesson',
+        title: PageTitle.mainTitle,
       };
 
       
@@ -28,13 +29,13 @@ export default class HomeScreen extends Component {
             <View style={{flex: 1, padding: 10}}>
               <View style={{flex: 1, flexDirection: "column", justifyContent: "space-between"}}>
                 <View style={styles.buttonRow}>
-                  <ThumbButton Label="Label 1" Color={Color.red} onPress={() => navigate('Label1Home') }/>
+                  <ThumbButton Label="Level 1" Color={Color.red} onPress={() => navigate('Label1Home') }/>
                 </View>
                 <View style={styles.buttonRow}>
-                  <ThumbButton Label="Label 2" Color={Color.green} onPress={() => navigate('Label2Home') }/>
+                  <ThumbButton Label="Level 2" Color={Color.green} onPress={() => navigate('Label2Home') }/>
                 </View>
                 <View style={styles.buttonRow}>
-                  <ThumbButton Label="Label 3" Color={Color.blue} onPress={() => navigate('Label3Home') }/>
+                  <ThumbButton Label="Level 3" Color={Color.blue} onPress={() => navigate('Label3Home') }/>
                 </View>
               </View>
             </View>

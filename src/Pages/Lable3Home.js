@@ -3,6 +3,7 @@ import {View} from 'react-native';
 import ThumbButton from '../Components/ThumbButton';
 import HeadLine from '../Components/HeadLine'
 import { Color } from "../css/_veriables";
+import { PageTitle } from '../Services/titletext';
 
 const styles = {
     buttonRow: {flex: 1, flexDirection: "row", justifyContent: "space-between"}
@@ -11,7 +12,7 @@ const styles = {
 export default class Label3HomeScreen extends Component {
   
   static navigationOptions = {
-        title: 'Kids Lesson',
+        title: PageTitle.level3
       };
 
       
@@ -29,7 +30,7 @@ export default class Label3HomeScreen extends Component {
             <View style={{flex: 1, flexDirection: "column", justifyContent: "space-between"}}>
               
               <ThumbButton Label="Lesson 7" Color={Color.purple} onPress={() => navigate('LavelSeven')}/>
-              <ThumbButton Label="Lesson 8" Color={Color.greenLime} onPress={() => navigate('LavelEight')}/>
+              <ThumbButton Label="Lesson 8" Color={Color.greenLime} fontColor="#000" onPress={() => navigate('LavelEight')}/>
               <ThumbButton Label="Lesson 9" Color={Color.red} onPress={() => navigate('LavelNine')}/>
                 
             </View>

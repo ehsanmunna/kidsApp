@@ -3,11 +3,12 @@ import {Text, View, ScrollView} from 'react-native';
 import NumberMatchingQuestion from '../Components/NumberMatchingQuestion';
 import HeadLine from '../Components/HeadLine';
 import { Color } from '../css/_veriables';
+import { PageTitle } from '../Services/titletext';
 
 export default class LavelFiveScreen extends Component {
 
   static navigationOptions = {
-    title: 'Level_5',
+    title: PageTitle.level2Lesson2
   };
 
     render() {

@@ -3,6 +3,7 @@ import {Text, View} from 'react-native';
 import LavelOneQuestion from '../Components/LavelOneQuestion';
 import HeadLine from '../Components/HeadLine';
 import { Color } from '../css/_veriables';
+import { PageTitle } from '../Services/titletext';
 
 const styles = {
   TextBold: {
@@ -13,7 +14,7 @@ const styles = {
 export default class LavelTwoScreen extends Component {
 
   static navigationOptions = {
-    title: 'Level_2',
+    title: PageTitle.level1Lesson2
   };
 
 

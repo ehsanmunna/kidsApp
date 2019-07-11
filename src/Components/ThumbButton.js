@@ -11,18 +11,14 @@ const sqSize = 100;
 
 export default class ThumbButton extends Component {
     render() {
-        //const {navigate} = this.props.navigation;
-        const extColor = {backgroundColor:  this.props.Color}
-        //const buttons = Object.assign({}, styles.buttonArea, extColor);
+        const extColor = {backgroundColor: this.props.Color}
+        const textColor = {color: this.props.fontColor != undefined ? this.props.fontColor : '#fff'}
+
       return (
         <View style={{flex: 1}}>
-            <TouchableOpacity style={[extColor, {flex: 1, justifyContent: "center"}]} onPress={this.props.onPress}>
-                <Text style={{lineHeight: sqSize, textAlign: "center", color: '#fff', fontWeight: "700"}}>{this.props.Label}</Text>
-                {/* {
-                  this.props.subtext
-                  ? <Text style={{lineHeight: sqSize, textAlign: "center", color: '#fff'}}>{this.props.subtext}</Text>
-                  : null
-                } */}
+            <TouchableOpacity style={[extColor, {flex: 1, justifyContent: "center"}]}
+              onPress={this.props.onPress}>
+                <Text style={[{lineHeight: sqSize, textAlign: "center", fontWeight: "700"}, textColor]}>{this.props.Label}</Text>
             </TouchableOpacity>
         </View>
       );
