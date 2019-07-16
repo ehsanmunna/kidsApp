@@ -24,7 +24,7 @@ export default class Label2HomeScreen extends Component {
             {/* <View>
                 <Text style={{fontSize: 20, margin: 10, textAlign: 'center'}}>Welcome to Interactive Lesson for Kids</Text>
             </View> */}
-            <HeadLine Color={Color.green} Label="Welcome to Interactive Lesson for Kids"/>
+            <HeadLine Color={Color.green} Label="Medium Lesson for Kids"/>
             
             <View style={{flex: 1, padding: 10}}>
             <View style={{flex: 1, flexDirection: "column", justifyContent: "space-between"}}>

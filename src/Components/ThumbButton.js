@@ -22,7 +22,7 @@ export default class ThumbButton extends Component {
         <View style={{flex: 1}}>
             <TouchableOpacity style={[ extColor, {flex: 1, justifyContent: "center"}]}
               onPress={this.props.onPress}>
-                <Text style={[{lineHeight: sqSize, textAlign: "center", fontWeight: "700"}, textColor]}>{this.props.Label}</Text>
+                <Text style={[{lineHeight: sqSize, textAlign: "center", fontWeight: "700", fontSize: 40}, textColor]}>{this.props.Label}</Text>
             </TouchableOpacity>
         </View>
       );
