@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View} from 'react-native';
+import {View, ImageBackground } from 'react-native';
 import ThumbButton from '../Components/ThumbButton';
 import HeadLine from '../Components/HeadLine'
 import { Color } from "../css/_veriables";
@@ -20,7 +20,8 @@ export default class HomeScreen extends Component {
     render() {
      const {navigate} = this.props.navigation;
       return (
-        <View style={{flex: 1}}>
+        <ImageBackground source={require('../image/back.jpg')} style={{width: '100%', height: '100%'}}>
+          <View style={{flex: 1}}>
             {/* <View>
                 <Text style={{fontSize: 20, margin: 10, textAlign: 'center'}}>Welcome to Interactive Lesson for Kids</Text>
             </View> */}
@@ -40,6 +41,8 @@ export default class HomeScreen extends Component {
               </View>
             </View>
         </View>
+        </ImageBackground>
+        
       );
     }
   }
