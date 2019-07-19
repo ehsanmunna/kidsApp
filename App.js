@@ -13,6 +13,7 @@ import LavelNineScreen from './src/Pages/LavelNineScreen';
 import Label1HomeScreen from './src/Pages/Lable1Home';
 import Label3HomeScreen from './src/Pages/Lable3Home';
 import Label2HomeScreen from './src/Pages/Lable2Home';
+import NumberScreen from './src/Pages/Number';
 
 // var SoundPlayer = require('react-native-sound');
 // var song = null;
@@ -33,7 +34,8 @@ const AppNavigator = createStackNavigator({
 
   LavelSeven: {screen: LavelSevenScreen },
   LavelEight: {screen: LavelEightScreen },
-  LavelNine: { screen: LavelNineScreen }
+  LavelNine: { screen: LavelNineScreen },
+  Number: { screen: NumberScreen }
 },
 {
   initialRouteName: "Home"

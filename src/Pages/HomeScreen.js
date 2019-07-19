@@ -32,25 +32,35 @@ export default class HomeScreen extends Component {
                 <Text style={{fontSize: 20, margin: 10, textAlign: 'center'}}>Welcome to Interactive Lesson for Kids</Text>
             </View> */}
             {/* <HeadLine Color={Color.green} Label="Welcome to Interactive Lesson for Kids"/> */}
-            <View style={{flex: 1}}>
+            <View style={{height: '30%'}}>
 
             </View>
             <View style={{flex: 1}}>
-              <View style={{flex: 1, flexDirection: "column", justifyContent: "flex-end", alignItems: 'flex-end'}}>
-                {/* <View style={styles.buttonRow}> */}
+              <View style={{flex: 1, flexDirection: "column"
+              //, justifyContent: "space-between"
+              //, justifyContent: "flex-end"
+              , alignItems: 'flex-end'
+              }}>
+                <View style={{flex: 1, flexDirection: "row"}}>
+                  <ImageThumbButton image={require('../image/Count-btn.jpg')}
+                     Label="Level 1" Color={Color.red} onPress={() => navigate('Number') }/>
                   {/* <ImageBackground source={require('../image/easy.jpg')} style={{width: '100%', height: '100%'}}> */}
                     <ImageThumbButton image={require('../image/easy.png')}
                      Label="Level 1" Color={Color.red} onPress={() => navigate('Label1Home') }/>
                   {/* </ImageBackground> */}
-                {/* </View> */}
-                {/* <View style={styles.buttonRow}> */}
+                </View>
+                <View style={styles.buttonRow}>
+                  <ImageThumbButton image={require('../image/Sum.jpg')}
+                    Label="Level 2" Color={Color.green} onPress={() => navigate('LavelEight') }/>
                   <ImageThumbButton image={require('../image/medium.png')}
                     Label="Level 2" Color={Color.green} onPress={() => navigate('Label2Home') }/>
-                {/* </View>
-                <View style={styles.buttonRow}> */}
+                </View>
+                <View style={styles.buttonRow}>
+                  <ImageThumbButton image={require('../image/Sub.jpg')}
+                     Label="Level 3" Color={Color.blue} onPress={() => navigate('LavelNine') }/>
                   <ImageThumbButton image={require('../image/hard.png')}
                      Label="Level 3" Color={Color.blue} onPress={() => navigate('Label3Home') }/>
-                {/* </View> */}
+                </View>
               </View>
             </View>
         </View>

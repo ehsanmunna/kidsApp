@@ -19,6 +19,7 @@ const PageTitle = {
     level3Lesson1: `${level3} : ${_Lesson} 1`,
     level3Lesson2: `${level3} : ${_Lesson} 2`,
     level3Lesson3: `${level3} : ${_Lesson} 3`,
+    Numbers: `Numbers`,
 }
 
 export {PageTitle}
