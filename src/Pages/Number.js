@@ -7,15 +7,14 @@ export default class NumberScreen extends Component {
     static navigationOptions = {
       title: PageTitle.Numbers
     };
-  
-  
-      render() {
-        return (
-            <View style={{flex: 1}}>
-                <ImageBackground source={require('../image/Count.jpg')} style={with100}>
+
+    render() {
+      return (
+          <View style={{flex: 1}}>
+            <ImageBackground source={require('../image/Count.jpg')} style={with100}>
                 {/* <Text style={[{lineHeight: sqSize, textAlign: "center", fontWeight: "700"}, textColor]}>{this.props.Label}</Text> */}
             </ImageBackground>
-            </View>
-        );
-      }
+          </View>
+      );
     }
+  }

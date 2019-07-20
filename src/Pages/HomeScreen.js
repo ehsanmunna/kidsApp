@@ -1,14 +1,16 @@
 import React, {Component} from 'react';
-import {View, ImageBackground } from 'react-native';
-import ThumbButton from '../Components/ThumbButton';
-import HeadLine from '../Components/HeadLine'
+import {View, ImageBackground, Image } from 'react-native';
 import { Color } from "../css/_veriables";
 import { PageTitle } from '../Services/titletext';
 import ImageThumbButton from '../Components/ImageButton';
+import { Ratio } from '../Services/Ratio';
 
 const styles = {
     buttonRow: {flex: 1, flexDirection: "row", justifyContent: "space-between"}
   }
+const imageWidth = 150;
+const imageRatio1 = Ratio(323, 125, imageWidth);
+const imageRatio2 = Ratio(242, 81, imageWidth);
 //SoundPlayer.MAIN_BUNDLE
 export default class HomeScreen extends Component {
   
@@ -23,17 +25,17 @@ export default class HomeScreen extends Component {
       
 
     render() {
+      console.log(imageRatio1)
+      console.log(imageRatio2)
      const {navigate} = this.props.navigation;
       return (
         <ImageBackground source={require('../image/back.jpg')} style={{width: '100%', height: '100%'}}>
-          <View style={{flex: 1}}>
-
-            {/* <View>
-                <Text style={{fontSize: 20, margin: 10, textAlign: 'center'}}>Welcome to Interactive Lesson for Kids</Text>
-            </View> */}
-            {/* <HeadLine Color={Color.green} Label="Welcome to Interactive Lesson for Kids"/> */}
-            <View style={{height: '30%'}}>
-
+          <View style={{flex: 1, alignItems: 'flex-end', flexDirection: "column"}}>
+            <View style={{height: '30%', flexDirection: "row", alignItems: 'flex-end'}}>
+              {/* <View style={{flex: 1, flexDirection: "row"}}> */}
+                  <Image style={{width: imageRatio1.width, height: imageRatio1.height}} source={require('../image/Excercise.jpg')}/>
+                  <Image style={{width: imageRatio2.width, height: imageRatio2.height}} source={require('../image/Lesson.jpg')}/>
+                {/* </View> */}
             </View>
             <View style={{flex: 1}}>
               <View style={{flex: 1, flexDirection: "column"
@@ -41,6 +43,7 @@ export default class HomeScreen extends Component {
               //, justifyContent: "flex-end"
               , alignItems: 'flex-end'
               }}>
+                
                 <View style={{flex: 1, flexDirection: "row"}}>
                   <ImageThumbButton image={require('../image/Count-btn.jpg')}
                      Label="Level 1" Color={Color.red} onPress={() => navigate('Number') }/>
