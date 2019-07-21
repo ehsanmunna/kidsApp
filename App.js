@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { createStackNavigator, createAppContainer } from "react-navigation";
-import HomeScreen from './src/Pages/HomeScreen';
+import HomeScreen from './src/Pages/HomeScreen2';
 import LavelOneScreen from './src/Pages/LavelOneScreen';
 import LavelTwoScreen from './src/Pages/LavelTwoScreen';
 import LavelThreeScreen from './src/Pages/LavelThreeScreen';
@@ -13,7 +13,9 @@ import LavelNineScreen from './src/Pages/LavelNineScreen';
 import Label1HomeScreen from './src/Pages/Lable1Home';
 import Label3HomeScreen from './src/Pages/Lable3Home';
 import Label2HomeScreen from './src/Pages/Lable2Home';
-import NumberScreen from './src/Pages/Number';
+import ExecNumberScreen from './src/Pages/ExecNumber';
+import ExecSumScreen from './src/Pages/ExecSum';
+import ExecSubScreen from './src/Pages/ExecSub';
 
 // var SoundPlayer = require('react-native-sound');
 // var song = null;
@@ -35,7 +37,9 @@ const AppNavigator = createStackNavigator({
   LavelSeven: {screen: LavelSevenScreen },
   LavelEight: {screen: LavelEightScreen },
   LavelNine: { screen: LavelNineScreen },
-  Number: { screen: NumberScreen }
+  Number: { screen: ExecNumberScreen },
+  ExecSum: { screen: ExecSumScreen },
+  ExecSub: { screen: ExecSubScreen },
 },
 {
   initialRouteName: "Home"

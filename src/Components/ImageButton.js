@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import {Text, View, ImageBackground, TouchableOpacity} from 'react-native';
-import { HexToRGBA } from '../Services/HexToRGB';
-
-const sqSize = 100;
+const sqSize = 140;
 // const styles = {
 //     buttonArea: {
 //         //height: sqSize,
@@ -21,7 +19,7 @@ export default class ImageThumbButton extends Component {
 
       return (
         <View>
-          <TouchableOpacity style={{width: 140, height: 140, padding: 10}} onPress={this.props.onPress}>
+          <TouchableOpacity style={{width: sqSize, height: sqSize, padding: 10}} onPress={this.props.onPress}>
             <ImageBackground source={this.props.image} style={with100}>
               {/* <Text style={[{lineHeight: sqSize, textAlign: "center", fontWeight: "700"}, textColor]}>{this.props.Label}</Text> */}
             </ImageBackground>
