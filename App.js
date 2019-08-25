@@ -17,6 +17,8 @@ import ExecNumberScreen from './src/Pages/ExecNumber';
 import ExecSumScreen from './src/Pages/ExecSum';
 import ExecSubScreen from './src/Pages/ExecSub';
 
+var SQLite = require('react-native-sqlite-storage');
+
 // var SoundPlayer = require('react-native-sound');
 // var song = null;
 
@@ -44,11 +46,19 @@ const AppNavigator = createStackNavigator({
 {
   initialRouteName: "Home"
 });
-
+const db = SQLite.openDatabase({name: 'test', createFromLocation: '~sqliteexample.db'})
 const AppContainer = createAppContainer(AppNavigator);
 
 export default class App extends Component {
-
+  
+  constructor(){
+    db.transaction((tx)=>{
+      tx.executeSql('SELECT * FROM Score', [], (tx,result)=>{
+        console.log('data: ', result);
+      })
+    })
+  }
+  
 
   render() {
     return (
