@@ -33,10 +33,11 @@ export default class HomeScreen extends Component {
       return (
         <ImageBackground source={require('../image/back.jpg')} style={{width: '100%', height: '100%'}}>
           <View style={{flex: 1, alignItems: 'flex-end', flexDirection: "column"}}>
-            <View style={{height: '30%', flexDirection: "row", alignItems: 'flex-end'}}>
+            <View style={{height: '30%', flexDirection: "row"}}>
               {/* <View style={{flex: 1, flexDirection: "row"}}> */}
-                  <Image style={{width: imageRatio1.width, height: imageRatio1.height, }} source={require('../image/Excercise.jpg')}/>
                   <Image style={{width: imageRatio2.width, height: imageRatio2.height, }} source={require('../image/Lesson.jpg')}/>
+                  <Text>test</Text>
+                  <Image style={{width: imageRatio1.width, height: imageRatio1.height, }} source={require('../image/Excercise.jpg')}/>
                 {/* </View> */}
             </View>
             <View style={{flex: 1}}>

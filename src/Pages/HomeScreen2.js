@@ -33,10 +33,10 @@ export default class HomeScreen extends Component {
 
           <View style={{flex: 1, flexDirection: "row"}}>
             <View style={[{backgroundColor: 'rgba(0,0,0,.5)'}, this.centerContainer]}>
-              <Image style={{width: imageRatio1.width, height: imageRatio1.height, }} source={require('../image/Excercise.jpg')}/>
+              <Image style={{width: imageRatio1.width, height: imageRatio1.height, }} source={require('../image/Lesson.jpg')}/>
             </View>
             <View style={[{backgroundColor: 'rgba(0,0,0,.5)'}, this.centerContainer]}>
-              <Image style={{width: imageRatio1.width, height: imageRatio1.height, }} source={require('../image/Lesson.jpg')}/>
+              <Image style={{width: imageRatio1.width, height: imageRatio1.height, }} source={require('../image/Excercise.jpg')}/>
             </View>
           </View>
 
