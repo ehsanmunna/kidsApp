@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { createStackNavigator, createAppContainer } from "react-navigation";
-import HomeScreen from './src/Pages/HomeScreen2';
+import HomeScreen from './src/Pages/HomeScreen';
 import LavelOneScreen from './src/Pages/LavelOneScreen';
 import LavelTwoScreen from './src/Pages/LavelTwoScreen';
 import LavelThreeScreen from './src/Pages/LavelThreeScreen';
@@ -16,14 +16,14 @@ import Label2HomeScreen from './src/Pages/Lable2Home';
 import ExecNumberScreen from './src/Pages/ExecNumber';
 import ExecSumScreen from './src/Pages/ExecSum';
 import ExecSubScreen from './src/Pages/ExecSub';
-
-var SQLite = require('react-native-sqlite-storage');
+import UserScreen from './src/Pages/UserScreen';
 
 // var SoundPlayer = require('react-native-sound');
 // var song = null;
 
 const AppNavigator = createStackNavigator({
   Home: { screen: HomeScreen },
+  UserScreen: { screen: UserScreen },
   Label1Home: { screen: Label1HomeScreen },
   Label2Home: { screen: Label2HomeScreen },
   Label3Home: { screen: Label3HomeScreen },
@@ -44,21 +44,13 @@ const AppNavigator = createStackNavigator({
   ExecSub: { screen: ExecSubScreen },
 },
 {
-  initialRouteName: "Home"
+  initialRouteName: "UserScreen"
 });
-// const db = SQLite.openDatabase({name: 'test', createFromLocation: '~sqliteexample.db'})
-// const AppContainer = createAppContainer(AppNavigator);
+
+const AppContainer = createAppContainer(AppNavigator);
 
 export default class App extends Component {
-  
-  constructor(){
-    // db.transaction((tx)=>{
-    //   tx.executeSql('SELECT * FROM Score', [], (tx,result)=>{
-    //     console.log('data: ', result);
-    //   })
-    // })
-  }
-  
+
 
   render() {
     return (
