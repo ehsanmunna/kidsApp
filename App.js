@@ -46,17 +46,17 @@ const AppNavigator = createStackNavigator({
 {
   initialRouteName: "Home"
 });
-const db = SQLite.openDatabase({name: 'test', createFromLocation: '~sqliteexample.db'})
-const AppContainer = createAppContainer(AppNavigator);
+// const db = SQLite.openDatabase({name: 'test', createFromLocation: '~sqliteexample.db'})
+// const AppContainer = createAppContainer(AppNavigator);
 
 export default class App extends Component {
   
   constructor(){
-    db.transaction((tx)=>{
-      tx.executeSql('SELECT * FROM Score', [], (tx,result)=>{
-        console.log('data: ', result);
-      })
-    })
+    // db.transaction((tx)=>{
+    //   tx.executeSql('SELECT * FROM Score', [], (tx,result)=>{
+    //     console.log('data: ', result);
+    //   })
+    // })
   }
   
 
