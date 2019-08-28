@@ -4,6 +4,7 @@ import ThumbButton from '../Components/ThumbButton';
 import HeadLine from '../Components/HeadLine'
 import { Color } from "../css/_veriables";
 import { PageTitle } from '../Services/titletext';
+import { NavigationEvents } from 'react-navigation';
 
 const styles = {
     buttonRow: {flex: 1, flexDirection: "row", justifyContent: "space-between"}
@@ -15,12 +16,27 @@ export default class Label1HomeScreen extends Component {
     title: PageTitle.level1,
     };
 
+    constructor(props){
+      super(props);
+      const { navigation } = this.props;
+      this.state = {
+        params: navigation.getParam('params')
+      }
+    }
+
       
 
     render() {
+    console.log(this.state)
      const {navigate} = this.props.navigation;
       return (
         <View style={{flex: 1}}>
+          <NavigationEvents
+            onWillFocus={payload => {
+              
+     //console.log('check user from home ', global.User)
+            }}
+          /> 
             {/* <View>
                 <Text style={{fontSize: 20, margin: 10, textAlign: 'center'}}>Welcome to Interactive Lesson for Kids</Text>
             </View> */}
