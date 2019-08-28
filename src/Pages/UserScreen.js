@@ -5,6 +5,8 @@ import { PageTitle } from '../Services/titletext';
 import ImageThumbButton from '../Components/ImageButton';
 import { Ratio } from '../Services/Ratio';
 import axios from "axios";
+import { NavigationEvents } from 'react-navigation';
+import AsyncStorage from '@react-native-community/async-storage';
 
 const styles = {
   buttonRow: {flex: 1, flexDirection: "row",backgroundColor: 'rgba(0,0,0,.5)'}
@@ -39,8 +41,7 @@ export default class UserScreen extends Component {
     //   }
     // }
 
-
-    componentDidMount(){
+    GetData(){
       axios.get('http://203.190.9.108/api.tuitionwaiver/api/Score')
         // .then(function(response){
         //   return response.json();
@@ -56,14 +57,19 @@ export default class UserScreen extends Component {
         // })
     }
 
-    navigateToHome(_id){
+    componentDidMount(){
+      this.GetData();
+    }
+
+    async navigateToHome(_id){
       const {navigate} = this.props.navigation;
       navigate('Home', {params: {
         Id: _id
         , RightScore: 0
         , WrongScore: 0
       }});
-      
+      await AsyncStorage.setItem('user', JSON.stringify({ Id: _id, RightScore: 0, WrongScore: 0 }))
+        
     }
 
     // ScoreById(id){
@@ -91,7 +97,12 @@ export default class UserScreen extends Component {
     
       return (
         <ImageBackground source={require('../image/back.jpg')} style={{width: '100%', height: '100%'}}>
-
+          <NavigationEvents
+              onDidFocus={payload => {
+                this.GetData();
+              }}
+              
+            />
           {/* <View style={{flex: 1, flexDirection: "row"}}>
             <View style={[{backgroundColor: 'rgba(0,0,0,.5)'}, this.centerContainer]}>
               <Image style={{width: imageRatio1.width, height: imageRatio1.height, }} source={require('../image/Lesson.jpg')}/>
@@ -106,13 +117,13 @@ export default class UserScreen extends Component {
               <ImageThumbButton image={require('../image/superman.jpg')}
                     Label="Level 2" Color={Color.green} onPress={() => this.navigateToHome(1) }/>
                 {/* <Text style={styles.whiteFont}>{this.ScoreById(this.state.scorelist, 1).RightScore} / {this.ScoreById(this.state.scorelist, 1).WrongScore}</Text> */}
-                <Text style={styles.whiteFont}>{this.state.SuperMan.RightScore} / {this.state.SuperMan.WrongScore}</Text>
+                <Text style={styles.whiteFont}>Right: {this.state.SuperMan.RightScore}, Wrong: {this.state.SuperMan.WrongScore}</Text>
               
             </View>
             <View style={this.centerContainer}>
               <ImageThumbButton image={require('../image/ironman.jpg')}
                       Label="Level 2" Color={Color.green} onPress={() => this.navigateToHome(2) }/>
-              <Text style={styles.whiteFont}>{this.state.IronMan.RightScore} / {this.state.IronMan.WrongScore}</Text>
+              <Text style={styles.whiteFont}>Right: {this.state.IronMan.RightScore}, Wrong: {this.state.IronMan.WrongScore}</Text>
               
             </View>
           </View>
@@ -122,12 +133,12 @@ export default class UserScreen extends Component {
             <View style={this.centerContainer}>
               <ImageThumbButton image={require('../image/spiderman.jpg')}
                      Label="Level 1" Color={Color.red} onPress={() => this.navigateToHome(3) }/>
-                     <Text style={styles.whiteFont}>{this.state.SpiderMan.RightScore} / {this.state.SpiderMan.WrongScore}</Text>
+                     <Text style={styles.whiteFont}>Right: {this.state.SpiderMan.RightScore}, Wrong: {this.state.SpiderMan.WrongScore}</Text>
             </View>
             <View style={this.centerContainer}>
               <ImageThumbButton image={require('../image/batman.jpg')}
                      Label="Level 1" Color={Color.red} onPress={() => this.navigateToHome(4) }/>
-                     <Text style={styles.whiteFont}>{this.state.BatMan.RightScore} / {this.state.BatMan.WrongScore}</Text>
+                     <Text style={styles.whiteFont}>Right: {this.state.BatMan.RightScore}, Wrong: {this.state.BatMan.WrongScore}</Text>
             </View>
           </View>
 

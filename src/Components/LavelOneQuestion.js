@@ -12,7 +12,7 @@ import axios from 'axios';
 import { NavigationEvents } from 'react-navigation';
 // import { UpdateScore } from '../Services/DataService';
 
-import { AsyncStorage } from '@react-native-community/async-storage';
+import AsyncStorage from '@react-native-community/async-storage';
 
 
 const styles = StyleSheet.create({
@@ -24,23 +24,9 @@ export default class LavelOneQuestion extends Component {
   state = {
     correctAns: this.props.correctAns,
     givenAns: 0
+
   }
 
-  _storeData = async () => {
-    try {
-      await AsyncStorage.setItem('@MySuperStore:key', 'I like to save it.');
-    } catch (error) {
-      // Error saving data
-    }
-  };
-
-  // constructor(props){
-  //   super(props);
-  //   const { navigation } = this.props;
-  //   this.state = {
-  //     params: navigation.getParam('params')
-  //   }
-  // }
 
 
   componentWillMount(){
@@ -49,19 +35,22 @@ export default class LavelOneQuestion extends Component {
   
   
 
-  SetAnsware = (_item) => {
+  SetAnsware = async (_item) => {
 
     Sound.Play(this.state.correctAns == _item);
 
     this.setState( {givenAns: _item} )
 
-    // if (this.state.correctAns == _item) {
-    //   //global.User.RightScore += 1;
-    //   UpdateScore(this.state.params.id, )
-    // } else {
-    //   //global.User.WrongScore += 1;
-    // }
-    this._storeData();
+    var maindata = await AsyncStorage.getItem('user');
+    var data = JSON.parse(maindata)
+    if (this.state.correctAns == _item) {
+      data.RightScore += 1;
+    } else {
+      data.WrongScore += 1;
+    }
+    await AsyncStorage.setItem('user', JSON.stringify(data))
+    console.log(data)
+    
   }
     render() {
       //console.log('Que ', global.UserId)

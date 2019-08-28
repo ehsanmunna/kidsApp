@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {View, ImageBackground, Image, Text } from 'react-native';
-import { AsyncStorage } from '@react-native-community/async-storage';
+import AsyncStorage from '@react-native-community/async-storage';
 import { Color } from "../css/_veriables";
 import { PageTitle } from '../Services/titletext';
 import ImageThumbButton from '../Components/ImageButton';
@@ -35,17 +35,21 @@ export default class HomeScreen extends Component {
         }
       }
 
-      _retrieveData = async () => {
-        try {
-          const value = await AsyncStorage.getItem('TASKS');
-          if (value !== null) {
-            // We have data!!
-            console.log(value);
-          }
-        } catch (error) {
-          // Error retrieving data
-        }
-      };
+      // getData = async () => {
+      //   try {
+      //     const value = await AsyncStorage.getItem('user')
+      //     if(value !== null) {
+      //       // value previously stored
+      //       console.log('user: ', value)
+      //     } else {
+      //       console.log('Get Done val ', value)
+      //     }
+      //   } catch(e) {
+      //     // error reading value
+      //     console.log(e)
+      //   }
+      //   console.log('Get Done')
+      // }
 
     render() {
      const {navigate} = this.props.navigation;
@@ -55,8 +59,16 @@ export default class HomeScreen extends Component {
         
         <ImageBackground source={require('../image/back.jpg')} style={{width: '100%', height: '100%'}}>
           <NavigationEvents
-            onDidFocus={payload => {
-              this._retrieveData()
+            onWillBlur={async() => {
+              const value = await AsyncStorage.getItem('user')
+              Axios.put('http://203.190.9.108/api.tuitionwaiver/api/Score/' + this.state.params.Id, JSON.parse(value))
+                .then((res)=>{
+                  console.log('success!!!')
+                  
+                })
+                .catch(e=>{
+                  console.log(e)
+                })
             }}
           />
         {/* <NavigationEvents

@@ -5,6 +5,7 @@ import ImageContainer from '../Components/ImageContainer';
 import { Sound } from "../Services/Sound";
 import { TextCSS } from '../css/Text';
 import { LayoutCSS } from '../css/Layout';
+import AsyncStorage from '@react-native-community/async-storage';
 
 const styles = {
     ImgTouch: {
@@ -26,9 +27,20 @@ export default class CompareQuestion extends Component {
      Sound.Init(); 
     }
 
-    PressImage = (value) => {
+    PressImage = async (value) => {
       Sound.Play(this.state.correctAns == value);
       this.setState({givenAns: value})
+
+      var maindata = await AsyncStorage.getItem('user');
+      var data = JSON.parse(maindata)
+      if (this.state.correctAns == value) {
+        data.RightScore += 1;
+      } else {
+        data.WrongScore += 1;
+      }
+      await AsyncStorage.setItem('user', JSON.stringify(data))
+      console.log(data)
+
     }
 
     render() {
